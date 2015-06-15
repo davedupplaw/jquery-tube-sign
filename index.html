@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="css/jquery-tube-sign.css" />
+
+		<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+
+		<script type="text/javascript" src="js/jquery-tube-sign.js"></script>
+		<script type="text/javascript">
+
+			$(document).ready( function() {
+				$('#sign').tubeSign({
+				});
+
+				$('#sign').tubeSign('addRotaList', [
+					{left:"Edgeware Road",right:"10mins"},
+					{left:"Mordon",right:"15mins"},
+					{left:"West Croydon",right:"20mins"}
+				], 4000, "clearBeforeEachUpdate" );
+
+				$('#sign').tubeSign('addFixedItem', {left:"Holton Heath",right:"2mins"} );
+
+				$('#sign').tubeSign('addRotaList', [
+					{left: "High Barnet", right: "11mins"},
+					{left: "Cockfosters", right: "12mins"},
+					{left: "Upminster", right: "14mins"}
+				], 4000, "continuousScroll" );
+			} );
+
+		</script>
+	</head>
+	<body>
+
+		<div id="sign"></div>
+
+	</body>
+</html>
